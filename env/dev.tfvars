@@ -1,6 +1,7 @@
 RESOURCE_GROUP_NAME     = "<Resource Group Name>"
-RESOURCE_GROUP_LOCATION = "<Azure Region for All Resources>"
+RESOURCE_GROUP_LOCATION = "<Azure Region for Deployment>"
 RESOURCE_TAGS = {
+  "<Key>"       = "<Value>"
   "Owner"       = "user@demo.com"
   "Environment" = "Development"
 }
@@ -14,13 +15,13 @@ VIRTUAL_NETWORK_SUBNETS = {
     name             = "SubnetA"
     address_prefixes = "10.0.0.0/24"
   },
-  "SubnetB" = { 
-    name = "SubnetB"
+  "SubnetB" = {
+    name             = "SubnetB"
     address_prefixes = "10.0.1.0/24"
   }
 }
 
-# Route tables rules, routes traffic through a mock NVA
+# Route tables rules, example routes traffic through a mock NVA
 ROUTE_TABLE_RULES = [
   {
     name                   = "RouteRule1"
