@@ -70,8 +70,8 @@ resource "azurerm_route_table" "rt" {
 resource "azurerm_subnet_route_table_association" "snet_rt_asc" {
   for_each = var.VIRTUAL_NETWORK_SUBNETS
 
-  # Both subnet and route table map are created using the same variable
-  # which means they contain the map object same keys
+  # Both subnet and route table are created using the same variable
+  # which means they contain the same map object keys
   subnet_id      = azurerm_subnet.snet[each.key].id
   route_table_id = azurerm_route_table.rt[each.key].id
 
